@@ -21,17 +21,17 @@ class JapaneseCar:
 class SportCar(JapaneseCar):
     def __init__(self, brand, model, year, price, horsepower):
         super().__init__(brand, model, year, price)
-        self.horsepower = 201  # Потужність двигуна в кінських силах
+        self.horsepower = horsepower  # Потужність двигуна в кінських силах
 
     @property
     def info(self):
         return f"{self.brand} {self.model}, {self.year}, Потужність: {self.horsepower} к.с., Ціна: ${self.price}"
 # Створимо об'єкт класу JapaneseCar
 car1 = JapaneseCar("Toyota", "Corolla", 1983, 10000)
-print(car1.info)  # Виведе: Toyota Corolla, 2022, Ціна: $20000
+print(car1.info)  # Виведе: Toyota Corolla, 1983, Ціна: $10000
 
 # Змінимо ціну
-car1.info = 21000
+car1.info = 13000
 print(car1.info)  # Виведе: Toyota Corolla, 2022, Ціна: $21000
 
 # Створимо об'єкт класу SportCar
